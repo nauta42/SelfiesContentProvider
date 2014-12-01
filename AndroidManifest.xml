@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="nauta42.selfies.provider"
+    android:versionCode="1"
+    android:versionName="1.0" xmlns:tools="http://schemas.android.com/tools">
+
+    <permission android:name="nauta42.selfies.provider.SELFIES_PERM" ></permission>
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="19" tools:ignore="OldTargetApi"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name" >
+        <provider
+            android:name="nauta42.selfies.provider.SelfiesContentProvider"
+            android:authorities="nauta42.selfies.provider"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="nauta42.selfies.provider.SELFIES_PERM" >
+        </provider>
+    </application>
+
+</manifest>
